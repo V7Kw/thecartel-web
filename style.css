@@ -21,8 +21,9 @@ body {
     padding: 20px;
     border: 2px solid #303030;
     border-radius: 20px;
+    background-color: transparent;
 
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     box-shadow: 0 0 30px 5px black;
 
     text-align: center;
@@ -32,6 +33,10 @@ body {
     transition: all 0.5s ease;
     position: relative;
     z-index: 1;
+}
+
+.Main:hover {
+    backdrop-filter: blur(18px);
 }
 
 
@@ -95,6 +100,6 @@ p {
 }
 
 .Title:hover {
-    text-shadow: 0 0 60px whitesmoke;
+    text-shadow: 0 0 60px black;
     font-size: 55px;
 }
