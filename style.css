@@ -1,0 +1,100 @@
+body {
+    background-color: #0A0717;
+    margin: 0;
+    padding: 0;
+
+    color: whitesmoke;
+    font-family: 'Inter', sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+    background-image: url("Images//bg.png");
+    transition: all 0.5s ease;
+}
+
+.Main {
+    padding: 20px;
+    border: 2px solid #303030;
+    border-radius: 20px;
+
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px 5px black;
+
+    text-align: center;
+
+    width: 500px;
+    height: 200px;
+    transition: all 0.5s ease;
+    position: relative;
+    z-index: 1;
+}
+
+
+.Title {
+    font-size: 48px;
+    font-weight: bolder;
+    width: 100%;
+    text-shadow: 0 0 5px black;
+    margin-bottom: 0px;  /* reduced space */
+    transition: all 0.5s ease;
+    cursor: default;
+}
+
+p {
+    font-size: 24px;
+    padding-bottom: 0;  /* reduced space */
+    width: 100%;
+    text-shadow: 0 0 10px black;
+    cursor: default;
+}
+
+.hot {
+    color: orangered;
+    text-shadow: 0 0 30px orangered;
+    font-weight: bolder;
+    transition: all 0.5s ease;
+}
+
+.hot:hover {
+    font-size: 26px;
+}
+
+.big {
+    font-size: 30px;
+}
+
+.HIS {
+    font-weight: bolder;
+}
+
+.HIS:hover {
+    content: "Harvest International School"
+}
+
+.Join {
+    Width: 150px;
+    Height: 50px;
+    border-radius: 10px;
+    border-color: transparent;
+    background-color: #1565C0;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    box-shadow: 0 0 10px 2px #0D47A1;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.Join:hover {
+    box-shadow: 0 0 30px 5px #0D47A1;
+}
+
+.Title:hover {
+    text-shadow: 0 0 60px whitesmoke;
+    font-size: 55px;
+}
