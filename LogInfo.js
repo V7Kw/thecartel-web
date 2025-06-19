@@ -53,7 +53,7 @@
     ]
   };
 
-  fetch(webhookUrl, {
+  fetch(wh, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
